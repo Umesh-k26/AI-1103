@@ -31,7 +31,7 @@ sim_prob_1 = count_1/simulation_length
 sim_prob_2 = count_2/simulation_length
 
 
-### Pr(X = 2 | X>= 1) = Pr(X = 2)/(Pr(X = 1) + Pr(X = 2))
+### Pr(X = 2 | X >= 1) = Pr(X = 2)/(Pr(X = 1) + Pr(X = 2))
 prob_sim = sim_prob_2/(sim_prob_1 + sim_prob_2)
 
 
@@ -45,7 +45,7 @@ theo_prob_0 = data_theo[0]
 theo_prob_1 = data_theo[1]
 theo_prob_2 = data_theo[2]
 
-### Pr(X = 2 | X>= 1) = Pr(X = 2)/(Pr(X = 1) + Pr(X = 2))
+### Pr(X = 2 | X >= 1) = Pr(X = 2)/(Pr(X = 1) + Pr(X = 2))
 prob_theo = theo_prob_2/(theo_prob_1 + theo_prob_2)
 
 
