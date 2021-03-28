@@ -128,6 +128,9 @@ Download latex-tikz codes from
 \begin{lstlisting}
 https://github.com/Umesh-k26/AI-1103/blob/main/Assignment2/assignment2.tex
 \end{lstlisting}
+\begin{lstlisting}
+https://github.com/Umesh-k26/AI-1103/blob/main/Assignment2/codes/assignment2.py
+\end{lstlisting}
 \section*{Question}
 Let the probability density funciton of a random variable X be 
 \begin{displaymath}
@@ -143,7 +146,9 @@ Let the probability density funciton of a random variable X be
 then, the value of c is equal to \rule{1cm}{0.2mm}.
 \section*{Solution}
 For a probability density function of a continuous random variable, 
-\[ \int \limits_{-\infty}^{\infty} f(x) \, dx = 1 \]
+\begin{equation}
+    \int \limits_{-\infty}^{\infty} f(x) \, dx = 1
+\end{equation}
 \begin{align}
     \int \limits_{-\infty}^{\infty} f(x) \, dx &=  \int \limits_0^{1/2} f(x) \, dx + \int \limits_{1/2}^1 f(x) \, dx\\
     &= \int \limits_0^{1/2} x \, dx + \int \limits_{1/2}^1 c(2x-1)^2 \, dx\\
@@ -152,5 +157,9 @@ For a probability density function of a continuous random variable,
     1 &= \frac{1}{8} + \frac{c}{6} \\
     \therefore c &= \frac{21}{4}
 \end{align}
-
+\\\\
+Graph of the function $f(x)$ using python:
+\begin{figure}[h]
+\includegraphics[scale = 1]{ogimage}
+\end{figure}
 \end{document}
