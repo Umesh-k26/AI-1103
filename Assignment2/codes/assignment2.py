@@ -9,18 +9,12 @@ def f(x):
     else:
         return 0
 
-x = np.arange(-2., 5., 0.001)
+X = np.linspace(-5,8,1000000)
 
-y = []
+Y = [f(x) for x in X]
 
-for i in range(len(x)):
-   y.append(f(x[i]))
-
-plt.xlabel('x')
-plt.ylabel('f(x)')
+plt.plot(X,Y)
+plt.xlabel('$x$')
+plt.ylabel('$f(x)$')
 plt.title('Probability density function')
-plt.plot(x,y,c='red', ls='', ms=1, marker='.')
-ax = plt.gca()
-ax.set_ylim([0, 8])
-
 plt.show()
