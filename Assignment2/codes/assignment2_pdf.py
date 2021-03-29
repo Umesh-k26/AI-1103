@@ -9,12 +9,12 @@ def f(x):
     else:
         return 0
 
-X = np.linspace(-5,8,1000000)
+X = np.linspace(0,1,1000000)
 
 Y = [f(x) for x in X]
 
 plt.plot(X,Y)
 plt.xlabel('$x$')
-plt.ylabel('$f(x)$')
+plt.ylabel('$f_X(x)$')
 plt.title('Probability density function')
 plt.show()
