@@ -135,7 +135,7 @@ https://github.com/Umesh-k26/AI-1103/blob/main/Assignment2/codes/assignment2.py
 \section*{Question}
 Let the probability density funciton of a random variable X be 
 \begin{displaymath}
-    f(x)=\lcbrak{
+    f_X(x)=\lcbrak{
                     \begin{array}{ll}
 		                x &  0 \leq x < \frac{1}{2}  \\\\
 		                c(2x-1)^2 & \frac{1}{2} < x \leq 1 \\\\
@@ -148,10 +148,10 @@ then, the value of c is equal to \rule{1cm}{0.2mm}.
 \section*{Solution}
 For a probability density function of a continuous random variable, 
 \begin{equation}
-    \int \limits_{-\infty}^{\infty} f(x) \, dx = 1 \label{eq1}
+    \int \limits_{-\infty}^{\infty} f_X(x) \, dx = 1 \label{eq1}
 \end{equation}
 \begin{align}
-    \int \limits_{-\infty}^{\infty} f(x) \, dx &=  \int \limits_0^{1/2} f(x) \, dx + \int \limits_{1/2}^1 f(x) \, dx\\
+    \int \limits_{-\infty}^{\infty} f_X(x) \, dx &=  \int \limits_0^{1/2} f_X(x) \, dx + \int \limits_{1/2}^1 f_X(x) \, dx\\
     &= \left. \frac{1}{2} (x)(x) \right\rvert_{x = \frac{1}{2}} + \int \limits_{1/2}^1 c(2x-1)^2 \, dx\\
     &= \frac{1}{2}\times\frac{1}{2}\times\frac{1}{2} + c\rsbrak{\brak{\frac{4x^3}{3} - 2x^2 + x}}_{1/2}^1 \\
     &= \frac{1}{8} + c\brak{\frac{1}{3} - \frac{1}{6}} \\
@@ -163,12 +163,21 @@ For a probability density function of a continuous random variable,
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{pdfimage.png}
-\caption{PDF of $f(x)$}
+\caption{Graph of $f_X(x)$}
 \end{figure}
-
+\begin{displaymath}
+    F_X(x)=\lcbrak{
+                    \begin{array}{ll}
+                        0 & x\leq 0 \\\\
+		                \frac{x^2}{2} &   0 \leq x \leq \frac{1}{2}  \\\\
+		                \frac{1}{8} + \frac{7}{8} (2x-1)^3 & \frac{1}{2} \leq x \leq 1 \\\\
+		                1 & x>1\\
+	                \end{array}    
+                }
+\end{displaymath}
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{cdfimage.png}
-\caption{CDF of $f(x)$}
+\caption{Graph of $F_X(x)$}
 \end{figure}
 \end{document}
