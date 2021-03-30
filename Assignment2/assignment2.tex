@@ -165,16 +165,10 @@ For a probability density function of a continuous random variable,
 \includegraphics[width=\columnwidth]{pdfimage.png}
 \caption{Graph of $f_X(x)$}
 \end{figure}
-\begin{displaymath}
-    F_X(x)=\lcbrak{
-                    \begin{array}{ll}
-                        \int\limits_{-\infty}^0 f_X(x) \, dx & x\leq 0 \\\\
-		                \int\limits_{-\infty}^{1/2} f_X(x) \, dx &   0 \leq x \leq \frac{1}{2}  \\\\
-		                \int\limits_{-\infty}^1 f_X(x) \, dx & \frac{1}{2} \leq x \leq 1 \\\\
-		                \int\limits_{-\infty}^{\infty}  f_X(x) \, dx& x>1\\
-	                \end{array}    
-                }
-\end{displaymath}
+\begin{equation} \label{eq9}
+    F_X(x) = f_X(X<=x) = \int\limits_{-\infty}^x f_X(x) \, dx
+\end{equation}
+from $f_X(x)$ and equation \eqref{eq9}, 
 \begin{displaymath}
     F_X(x)=\lcbrak{
                     \begin{array}{ll}
