@@ -156,14 +156,13 @@ Required probability
     \end{split}
     \\
     &= \pr{X_2 > X_3 > X_4 > X_5}\\
-    \begin{split}
+    \begin{split} \label{eq3}
         &= \pr{X_2 = max(X_2, X_3, X_4, X_5)} \\
         &\qquad \times \pr{X_3 = max(X_3, X_4, X_5)} \\
         &\qquad \times \pr{X_4 = max(X_4, X_5)}
     \end{split}
 \end{align}
 Since $X_1$, $X_2$, $X_3$, $X_4$ and $X_5$ are identical and independently distributed random variables,\\
-required probability is 
 \begin{align}
     \begin{split}
         \pr{X_2 = max(X_2, X_3, X_4, X_5)}\\
@@ -179,7 +178,7 @@ Substituting
     u &= \Phi(x) \\
     du &= \phi(x) \, dx 
 \end{align}
-and similarly solving other two terms of the product, we get required probability 
+and similarly solving other two terms of the product of \eqref{eq3}, we get required probability 
 \begin{align}
      &= \int\limits_0^1 u^3 \, du \times \int\limits_0^1 u^2 \, du \times \int \limits_0^1 u\,du \\
      &= \rsbrak{\frac{u^4}{4}}_0^1 \times \rsbrak{\frac{u^3}{3}}_0^1 \times \rsbrak{\frac{u^2}{2}}_0^1 \\
