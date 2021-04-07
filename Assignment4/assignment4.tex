@@ -135,7 +135,10 @@ https://github.com/Umesh-k26/AI-1103/tree/main/Assignment4/codes
 \question Let $X_1, X_2, X_3, X_4, X_5$ be \textit{i.i.d.} random variables having a continuous distribution function. 
 Then 
 \begin{equation*}
-    \pr{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 = max\brak{X_1, X_2, X_3, X_4, X_5}}
+    \begin{split}
+        \pr{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 &= max(X_1, X_2, \\
+        & \qquad X_3, X_4, X_5)}
+    \end{split}
 \end{equation*}
 equals \rule{1cm}{0.2mm}.
 \begin{description}
@@ -180,7 +183,7 @@ required probability is
         &\qquad \times \int \limits_{-\infty}^{\infty} \Phi(x)\phi(x) \, dx 
     \end{split}
 \end{align}
-Substituting 
+\hspace{1cm}Substituting,
 \begin{align}
     u &= \Phi(x) \\
     du &= \phi(x) \, dx 
