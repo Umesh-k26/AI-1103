@@ -84,6 +84,8 @@ columns=fullflexible
 \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
 \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\prlbrak}[1]{\ensuremath{\Pr\left(#1\right.}}
+
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
@@ -157,25 +159,30 @@ Let \[\{x_1, x_2, x_3, x_4, x_5\} \in X\]
 Required probability,
 \begin{equation}\label{eq1}
     \begin{split}
-        = \pr{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 &= max(X_1, X_2, \\
-        & \qquad X_3, X_4, X_5)}
+        = \prlbrak{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 &= max(X_1, X_2,} \\
+        & \qquad \rbrak{X_3, X_4, X_5)}
     \end{split}
 \end{equation}
 \begin{equation}
     \begin{split}
-        = P_X(x_1>x_2>x_3>x_4>x_5 | x_1 &= max(x_1, x_2,  \\
-        & \qquad x_3, x_4, x_5)
+        = \prlbrak{x_1>x_2>x_3>x_4>x_5 | x_1 &= max(x_1, x_2,}  \\
+        & \qquad \rbrak{x_3, x_4, x_5)}
     \end{split}
 \end{equation}
 Required probability, 
 \begin{align}
-    &= P_X(x_2>x_3>x_4>x_5)\\
-    \begin{split}
-        &= P_X(x_2 = max(x_2, x_3, x_4, x_5)) \\
-        & \qquad \times P_X(x_3 = max(x_3, x_4, x_5)) \\
-        & \qquad \times P_X(x_4 = max(x_4, x_5))
+    &= \pr{x_2>x_3>x_4>x_5}\\
+    \begin{split}\label{eq4}
+        &= \pr{x_2 = max(x_2, x_3, x_4, x_5)} \\
+        & \qquad \times \pr{x_3 = max(x_3, x_4, x_5)} \\
+        & \qquad \times \pr{x_4 = max(x_4, x_5)}
     \end{split}
-    \\
+\end{align}
+\\
+Since $x_2, x_3, x_4, x_5$ are distinct, only one of them can be maximum. And the probability that $x_2$ being maximum is $\dfrac{1}{4}$.\\\\
+Similarly, the probabilities of other two terms of the equation \eqref{eq4} are $\dfrac{1}{3}$ and $\dfrac{1}{2}$ respectively.\\\\
+$\therefore$ Required probability is,
+\begin{align}
     &= \frac{1}{4}\times \frac{1}{3} \times \frac{1}{2} \\
     &= \frac{1}{4!}
 \end{align}
