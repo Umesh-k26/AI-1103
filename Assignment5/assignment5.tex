@@ -169,11 +169,8 @@ $Y$ is symmetric about $0$,
     f_V(v) &= \int_{-\infty}^{\infty} f_Y(y) f_X(v+y) \, dy \label{eq13}
 \end{align}
 %
-\section*{Option 2}
-From \eqref{eq8} and \eqref{eq13}, $U$ and $V$ have same distribution.\\
-$\therefore$  Option 2 is \textbf{correct}.
 \\\\
-Examining other options : \\
+Examining each option : \\
 To disprove, it is enough to examine one case.
 \\\\
 Let $X\sim U(0,1)$ and $Y\sim U(0,1)$.
@@ -203,60 +200,60 @@ $(U,V)$ is uniformly distributed on $T$.
 %
 \vspace{0.5cm}
 %
-\section*{Option 1}
-Here, $f_{U,V}(u,v) = \frac{1}{2}$,\\
-And
-\begin{equation*}
-    f_U(u) f_V(v)&= \lcbrak{
-                                \begin{array}{ll}
-                                    u(1-v) & 0<u<1, 0<v<1 \\\\
-                                    u(1+v) & 0<u<1, -1<v<0 \\\\
-                                    (2-u)(1-v) & 1<u<2, 0<v<1 \\\\
-                                    (2-u)(1+v) & 1<u<2, -1<v<0
-                                \end{array}
-                           }
-\end{equation*}
-
-$\implies f_{U,V}(u,v) \neq f_U(u) f_V(v) $\\
-$\therefore$ $U$ and $V$ are not always independent.\\
-Hence, Option 1 is \textbf{incorrect}.
-%
+\\
+Examining option-wise : 
+\begin{enumerate}
+    \item Here, $f_{U,V}(u,v) = \frac{1}{2}$,\\
+          And
+          \begin{equation*}
+              f_U(u) f_V(v)&= \lcbrak{
+                                          \begin{array}{ll}
+                                              u(1-v) & 0<u<1, 0<v<1 \\\\
+                                              u(1+v) & 0<u<1, -1<v<0 \\\\
+                                              (2-u)(1-v) & 1<u<2, 0<v<1 \\\\
+                                              (2-u)(1+v) & 1<u<2, -1<v<0
+                                          \end{array}
+                                     }
+          \end{equation*}
+          
+          $\implies f_{U,V}(u,v) \neq f_U(u) f_V(v) $\\
+          $\therefore$ $U$ and $V$ are not always independent.\\
+          Hence, Option 1 is \textbf{incorrect}.
 \vspace{0.5cm}
-%
-\section*{Option 3}
-From \eqref{eq14},
-\begin{equation}
-    f_U(-u)&=\lcbrak{
-                    \begin{array}{ll}
-		                -u &  0<u<1 \\
-		                2+u & 1<u<2 \\
-	                \end{array}    
-                }
-\end{equation}
-But,
-\begin{equation}
-    f_U(-u) \neq f_U(u)
-\end{equation}
-$\therefore$ $U$ is not always symmetric about 0.\\
-Hence, Option 3 is \textbf{incorrect}.
-%
+    \item From \eqref{eq8} and \eqref{eq13}, $U$ and $V$ have same distribution.\\
+          $\therefore$  Option 2 is \textbf{correct}.
 \vspace{0.5cm}
-%
-\section*{Option 4}
-From \eqref{eq15},
-\begin{equation}
-    f_V(-v)&=\lcbrak{
-                    \begin{array}{ll}
-		                1+v &  0<v<1  \\
-		                1-v & -1<v<0 \\
-	                \end{array}    
-                }
-\end{equation}
-But, 
-\begin{equation}
-    f_V(-v) \neq f_V(v)
-\end{equation}
-$\therefore$ $V$ is not always symmetric about 0.\\
-Hence, Option 4 is \textbf{incorrect}.
+    \item From \eqref{eq14},
+          \begin{equation}
+              f_U(-u)&=\lcbrak{
+                              \begin{array}{ll}
+          		                -u &  0<u<1 \\
+          		                2+u & 1<u<2 \\
+          	                \end{array}    
+                          }
+          \end{equation}
+          But,
+          \begin{equation}
+              f_U(-u) \neq f_U(u)
+          \end{equation}
+          $\therefore$ $U$ is not always symmetric about 0.\\
+          Hence, Option 3 is \textbf{incorrect}.
+\vspace{0.5cm}
+    \item From \eqref{eq15},
+          \begin{equation}
+              f_V(-v)&=\lcbrak{
+                              \begin{array}{ll}
+          		                1+v &  0<v<1  \\
+          		                1-v & -1<v<0 \\
+          	                \end{array}    
+                          }
+          \end{equation}
+          But, 
+          \begin{equation}
+              f_V(-v) \neq f_V(v)
+          \end{equation}
+          $\therefore$ $V$ is not always symmetric about 0.\\
+          Hence, Option 4 is \textbf{incorrect}.
+\end{enumerate}
 
 \end{document}
