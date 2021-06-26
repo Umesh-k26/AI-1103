@@ -140,121 +140,53 @@ $U= X+Y$ and $V= X-Y$. Then
 \end{enumerate}
 
 \section*{Solution}
-$Y$ is symmetric about $0$,
-\begin{equation} \label{eq1}
-    \implies f_Y(-y) = f_Y(y)
-\end{equation}
-% 
-\begin{align}
-    F_U(u) &= \pr{U\leq u} \\
-           &= \pr{X+Y \leq u}\\
-           &= \pr{X \leq u-Y} \\
-    F_U(u) &= \int_{-\infty}^{\infty} f_Y(y) \int_{-\infty}^{u-y} f_X(x) \,dx \, dy \label{eq5}\\
-\intertext{differentiating equation \eqref{eq5} gives,}
-    f_U(u) &= \int_{-\infty}^{\infty} f_Y(y) f_X(u-y) \, dy\\
-\begin{split}
-    f_U(u) &= \int_{-\infty}^{\infty} f_Y(-y) f_X(u+y) \, dy \\
-           &\qquad \brak{\because \int_a^b f(x) \,dx = \int_a^b f(a+b-x) \,dx}
-\end{split}
-\intertext{from \eqref{eq1}, }
-     f_U(u) &= \int_{-\infty}^{\infty} f_Y(y) f_X(u+y) \, dy \label{eq8}
-\end{align}
-% 
-\begin{align}
-    F_V(v) &= \pr{V \leq v} \\
-           &= \pr{X-Y \leq v} \\
-           &= \pr{X \leq v+Y} \\
-    F_V(v) &= \int_{-\infty}^{\infty} f_Y(y) \int_{-\infty}^{v+y} f_X(x) \,dx \,dy \label{eq12}\\
-\intertext{differentiating equation \eqref{eq12} gives,}
-    f_V(v) &= \int_{-\infty}^{\infty} f_Y(y) f_X(v+y) \, dy \label{eq13}
-\end{align}
-%
-\\\\
-Examining each option : \\
-To disprove, it is enough to examine one case.
-\\\\
-Let $X\sim U(0,1)$ and $Y\sim U(0,1)$.
-%
-$R_U\in [0,2]$ and $R_V \in [-1,1]$
-
-\begin{align}
-     f_U(u)&=\lcbrak{
-                    \begin{array}{ll}
-		                u &  0<u<1  \\
-		                2-u & 1<u<2 \\
-	                \end{array}    
-                }\label{eq14}
-\\
-    f_V(v)&=\lcbrak{
-                    \begin{array}{ll}
-		                1-v &  0<v<1  \\
-		                1+v & -1<v<0 \\
-	                \end{array}    
-                }\label{eq15}
-\end{align}
+Since $Y$ is symmetric about $0$, 
 \begin{equation}
-    f_{U,V}(u,v) &= \frac{1}{2} \hspace{1cm} (u,v)\in R_{U,V} \label{eq16}
+    \phi_Y(-t) = \phi_Y(t) \label{eq1}
 \end{equation}
-%
-$(U,V)$ is uniformly distributed on $T$.
-%
-\vspace{0.5cm}
-%
-\\
-Examining option-wise : 
+Since $X$ and $Y$ are independent random variables,
+\begin{align}
+    \phi_{X+Y}(t) &= \phi_X(t)\, \phi_Y(t) \label{eq2}\\
+    \phi_{X-Y}(t) &= \phi_X(t)\, \phi_Y(-t) \label{eq3}\\
+    \phi_{X-Y}(t) &= \phi_X(t)\, \phi_Y(t) \hspace{1cm}\brak{\text{from} \eqref{eq1}} \label{eq4}
+\end{align}
+Let $U=X+Y$ and $V=X-Y$.
+\begin{align}
+    \phi_U(t) &= \phi_X(t)\, \phi_Y(t) \label{eq5}\\
+    \phi_V(t) &= \phi_X(t)\, \phi_Y(t) \label{eq6}\\
+    \phi_U(t) \, \phi_V(t) &= \phi_X^2(t) \, \phi_Y^2(t) \label{eq7}\\
+    \phi_{U+V}(t) &= \phi_{2X}(t) = \phi_{X}(2t) \label{eq8}
+\end{align}
+\\\\
+Examining each option : 
 \begin{enumerate}
-    \item From \eqref{eq14}, \eqref{eq15} and \eqref{eq16}, we have \\
-          $$f_{U,V}(u,v) = \frac{1}{2}$$
-          And
-          \begin{equation*}
-              f_U(u) f_V(v)&= \lcbrak{
-                                          \begin{array}{ll}
-                                              u(1-v) & 0<u<1, 0<v<1 \\\\
-                                              u(1+v) & 0<u<1, -1<v<0 \\\\
-                                              (2-u)(1-v) & 1<u<2, 0<v<1 \\\\
-                                              (2-u)(1+v) & 1<u<2, -1<v<0
-                                          \end{array}
-                                     }
-          \end{equation*}
-          
-          $$\implies f_{U,V}(u,v) \neq f_U(u) f_V(v) $$
-          $\therefore$ $U$ and $V$ are not always independent.\\
-          Hence, Option 1 is \textbf{incorrect}.
-\vspace{0.5cm}
-    \item From \eqref{eq8} and \eqref{eq13}, $U$ and $V$ have same distribution.\\
-          $\therefore$  Option 2 is \textbf{correct}.
-\vspace{0.5cm}
-    \item From \eqref{eq14},
-          \begin{equation}
-              f_U(-u)&=\lcbrak{
-                              \begin{array}{ll}
-          		                -u &  0<u<1 \\
-          		                2+u & 1<u<2 \\
-          	                \end{array}    
-                          }
-          \end{equation}
-          But,
-          \begin{equation}
-              f_U(-u) \neq f_U(u)
-          \end{equation}
-          $\therefore$ $U$ is not always symmetric about 0.\\
-          Hence, Option 3 is \textbf{incorrect}.
-\vspace{0.5cm}
-    \item From \eqref{eq15},
-          \begin{equation}
-              f_V(-v)&=\lcbrak{
-                              \begin{array}{ll}
-          		                1+v &  0<v<1  \\
-          		                1-v & -1<v<0 \\
-          	                \end{array}    
-                          }
-          \end{equation}
-          But, 
-          \begin{equation}
-              f_V(-v) \neq f_V(v)
-          \end{equation}
-          $\therefore$ $V$ is not always symmetric about 0.\\
-          Hence, Option 4 is \textbf{incorrect}.
+    \item 
+    If $U$ and $V$ are independent, then \[\phi_{U+V}(t) = \phi_U(t)\, \phi_V(t)\]
+    But from \eqref{eq7} and \eqref{eq8}, 
+    \begin{equation}
+        \phi_{U+V}(t) \neq \phi_U(t)\, \phi_V(t)
+    \end{equation}
+    Hence, \textbf{Option 1 is incorrect.}\\
+    
+    \item 
+    From \eqref{eq5} and \eqref{eq6}, \[\phi_U(t) = \phi_V(t)\]
+    $\implies$ $U$ and $V$ have same distribution.\\
+    Hence, \textbf{Option 2 is correct.}\\
+    
+    \item 
+    \begin{align}
+        \phi_U(-t) &= \phi_X(-t)\, \phi_Y(-t) \\
+        \phi_U(-t) &= \brak{-\phi_X(t)}\, \brak{\phi_Y(t)} \\
+        \phi_U(-t) &= -\phi_X(t)\, \phi_Y(t) \\
+        \phi_U(-t) &= -\phi_U(t)
+    \end{align}
+    \(\implies \phi_U(-t) \neq \phi_U(t)\) \\
+    $\implies$ $U$ is not symmetric about $0$.\\
+    Hence, \textbf{Option 3 is incorrect.}\\
+    
+    \item 
+    Since $U$ and $V$ have the same distribution, $V$ is also not symmetric about $0$.\\
+    Hence, \textbf{Option 4 is incorrect.}
 \end{enumerate}
-
 \end{document}
+ 
