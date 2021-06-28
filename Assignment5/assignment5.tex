@@ -156,15 +156,15 @@ $U= X+Y$ and $V= X-Y$. Then
 
 \section*{Solution}
 \begin{lemma}
-If a random variable $X$ has a symmetrical distribution about the origin, i.e.,$f(-x) = f(x)$,
-then $\phi_X(t)$ is even function of $t$.
+If a random variable $X$ has a symmetrical distribution about the origin, i.e.,\\
+$f_X(-x) = f_X(x)$, then $\phi_X(t)$ is even function of $t$.
 \end{lemma}
 \begin{proof}
 \begin{align}
-    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{itx}f(x) \, dx \\
+    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{itx}f_X(x) \, dx \\
     \intertext{Put $x = -y$}
-    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f(-y) \, dy \\
-    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f(y) \, dy \\
+    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f_X(-y) \, dy \\
+    \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f_X(y) \, dy \\
     \phi_X(t) &= \phi_X(-t)
 \end{align}
 \end{proof}
